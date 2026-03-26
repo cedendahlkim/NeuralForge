@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  neural-forge:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PYTHONPATH=/app
+    volumes:
+      - neural_forge_data:/app/data
+      - neural_forge_models:/app/models
+      - neural_forge_skills:/app/skills
+    restart: unless-stopped
+    networks:
+      - neural-forge-network
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - neural-forge-network
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: neural_forge
+      POSTGRES_USER: neuralforge
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-neuralforge123}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: unless-stopped
+    networks:
+      - neural-forge-network
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    networks:
+      - neural-forge-network
+    # GPU support (uncomment if you have NVIDIA GPU)
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+volumes:
+  neural_forge_data:
+  neural_forge_models:
+  neural_forge_skills:
+  redis_data:
+  postgres_data:
+  ollama_data:
+
+networks:
+  neural-forge-network:
+    driver: bridge
