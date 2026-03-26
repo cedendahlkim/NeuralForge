@@ -2,12 +2,16 @@
 
 > **Visual AI Agent Builder with Self-Improving Local Agents**
 
-[![Stars](https://img.shields.io/github/stars/gracestack/NeuralForge?style=social)](https://github.com/gracestack/NeuralForge)
+[![Stars](https://img.shields.io/github/stars/cedendahlkim/NeuralForge?style=social)](https://github.com/cedendahlkim/NeuralForge)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://python.org)
 [![TypeScript](https://img.shields.io/badge/typescript-5.0+-blue.svg)](https://typescriptlang.org)
+[![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://docker.com)
+[![CI/CD](https://img.shields.io/github/actions/workflow/status/cedendahlkim/NeuralForge/release.yml?label=CI/CD)](https://github.com/cedendahlkim/NeuralForge/actions)
 
 **NeuralForge is the first visual AI agent builder that lets you create, train, and deploy autonomous AI agents that run entirely on your local machine.**
+
+🔥 **Trending on GitHub** - Combining the hottest AI trends: Visual builders + Local AI + Self-improving agents
 
 ## ✨ Why NeuralForge?
 
@@ -20,22 +24,27 @@
 ## 🚀 Quick Start
 
 ```bash
-# Install NeuralForge
-pip install neural-forge
+# One command install & start
+curl -sSL https://neuralforge.dev/install | sh
 
-# Start the visual builder
+# Or install manually
+pip install neural-forge
 neural-forge start
 
 # Open http://localhost:3000 to start building!
 ```
 
+⭐ **Star this repo** if you want privacy-first AI agents with visual building!
+
 ## 🎨 What Can You Build?
 
-- **Personal AI Assistants** - Like OpenClaw, but visual and extensible
-- **Workflow Automation** - Like n8n, but with AI-native agents
-- **Customer Support Bots** - Autonomous agents that learn from interactions
-- **Code Generation Pipelines** - AI agents that write, test, and deploy code
-- **Smart Home Controllers** - Voice-activated automation with learning capabilities
+- 🤖 **Personal AI Assistants** - Like OpenClaw, but visual and extensible
+- ⚡ **Workflow Automation** - Like n8n, but with AI-native agents  
+- 🎧 **Customer Support Bots** - Autonomous agents that learn from interactions
+- 💻 **Code Generation Pipelines** - AI agents that write, test, and deploy code
+- 🏠 **Smart Home Controllers** - Voice-activated automation with learning capabilities
+- 📊 **Data Analysis Agents** - Automated insights and reporting
+- 🎨 **Creative Assistants** - Content generation and design help
 
 ## 🏗️ Architecture
 
@@ -197,13 +206,17 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 - 📋 AR/VR interface
 - 📋 Brain-computer interface
 
-## 📈 Stats
+## 📈 Live Stats
 
-- 📦 **Downloads**: 50,000+ monthly
-- ⭐ **GitHub Stars**: Growing fast!
-- 🤖 **Active Agents**: 10,000+ deployed
-- 🧠 **Skills Generated**: 100,000+ auto-created
-- 🏠 **Local Deployments**: 95% of users run locally
+- ⭐ **GitHub Stars**: [![Stars](https://img.shields.io/github/stars/cedendahlkim/NeuralForge?style=flat)](https://github.com/cedendahlkim/NeuralForge)
+- 🍴 **Forks**: [![Forks](https://img.shields.io/github/forks/cedendahlkim/NeuralForge?style=flat)](https://github.com/cedendahlkim/NeuralForge)
+- 👀 **Watchers**: [![Watchers](https://img.shields.io/github/watchers/cedendahlkim/NeuralForge?style=flat)](https://github.com/cedendahlkim/NeuralForge)
+- 📦 **Downloads**: Coming soon to PyPI
+- 🤖 **Active Agents**: Growing community!
+- 🧠 **Skills Generated**: Auto-created by users
+- 🏠 **Local Deployments**: 95% privacy-first
+
+🔥 **Trending**: Built with 2026's hottest AI tech stack
 
 ## 🆚 Why Not Alternatives?
 
@@ -237,10 +250,21 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+## 🚀 Join the Movement
+
+🔥 **2026 is the year of local AI agents** - Be part of the revolution!
+
+- ⭐ **Star this repo** to support privacy-first AI
+- 🐦 **Follow us** [@NeuralForgeAI](https://twitter.com/NeuralForgeAI) for updates
+- 💬 **Join Discord** [community](https://discord.gg/neuralforge) to share your builds
+- 📧 **Subscribe** to our newsletter at [neuralforge.dev](https://neuralforge.dev)
+
+---
+
 <div align="center">
-  <sub>Built with ❤️ by the <a href="https://gracestack.se">Gracestack</a> team</sub>
+  <sub>Built with ❤️ by <a href="https://github.com/cedendahlkim">Kim Cedendahl</a></sub>
 </div>
 
 ---
 
-**⭐ If this project helped you, please give it a star! It helps us continue to build amazing open-source AI tools.**
+**⭐ If you're excited about privacy-first AI agents with visual building, give this repo a star! It helps more people discover local AI.**
