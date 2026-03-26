@@ -1,0 +1,33 @@
+name: GitHub Engagement
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  issues:
+    types: [ opened, closed ]
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Update README with stats
+      run: |
+        echo "📊 Repository Statistics" >> README.md
+        echo "- ⭐ Stars: ${{ github.event.repository.stargazers_count || 0 }}" >> README.md
+        echo "- 🍴 Forks: ${{ github.event.repository.forks_count || 0 }}" >> README.md
+        echo "- 👀 Watchers: ${{ github.event.repository.watchers_count || 0 }}" >> README.md
+        echo "- 📦 Downloads: Coming soon" >> README.md
+        
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git diff --staged --quiet || git commit -m "📊 Update repository stats"
+        git push
